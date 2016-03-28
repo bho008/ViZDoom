@@ -17,7 +17,6 @@ class depthBuffer{
 public:
     BYTE *getBuffer();
     BYTE *getBufferPoint(unsigned int x, unsigned int y);
-    void setPoint(unsigned int x, unsigned int y, BYTE depth);
     void setPoint(unsigned int x, unsigned int y);
     void setActualDepth(BYTE depth);
     void setActualDepthConv(int depth);

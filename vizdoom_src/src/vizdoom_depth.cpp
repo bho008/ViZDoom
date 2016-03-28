@@ -67,13 +67,6 @@ void depthBuffer::setPoint(unsigned int x, unsigned int y) {
         *dpth = actualDepth;
 }
 
-//set point(x,y) value with requested depth
-void depthBuffer::setPoint(unsigned int x, unsigned int y, BYTE depth) {
-    BYTE *dpth = getBufferPoint(x, y);
-    if(dpth!=NULL)
-        *dpth = depth;
-}
-
 //store depth value for later usage
 void depthBuffer::setActualDepth(BYTE depth) {
     if(this->isLocked())
@@ -91,6 +84,7 @@ void depthBuffer::setActualDepth(BYTE depth) {
 
 //store depth value for later usage with automated conversion based on stored boundries
 void depthBuffer::setActualDepthConv(int depth) {
+//CEILING and FLOOR are affected.
     if(this->isLocked())
         return;
     if(depth>maxDepth)
