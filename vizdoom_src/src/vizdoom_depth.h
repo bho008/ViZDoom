@@ -13,7 +13,7 @@
 #include <SDL_video.h>
 #endif
 
-class depthBuffer{
+class ViZDoomDepthBuffer{
 public:
     BYTE *getBuffer();
     BYTE *getBufferPoint(unsigned int x, unsigned int y);
@@ -26,8 +26,8 @@ public:
     void storeY(int y);
     int getX(void);
     int getY(void);
-    depthBuffer(unsigned int width, unsigned int height);
-    ~depthBuffer();
+    ViZDoomDepthBuffer(unsigned int width, unsigned int height);
+    ~ViZDoomDepthBuffer();
     unsigned int getBufferSize();
     unsigned int getBufferWidth();
     unsigned int getBufferHeight();
@@ -59,5 +59,5 @@ private:
 #endif
 };
 
-extern depthBuffer* depthMap;
+extern ViZDoomDepthBuffer* depthMap;
 #endif

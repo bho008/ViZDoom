@@ -152,7 +152,7 @@ void ViZDoom_ScreenInit() {
     if(*vizdoom_screen_format==VIZDOOM_SCREEN_CBCGCRDB
        ||*vizdoom_screen_format==VIZDOOM_SCREEN_CRCGCBDB
        ||*vizdoom_screen_format==VIZDOOM_SCREEN_DEPTH_BUFFER8) {
-        depthMap = new depthBuffer(vizdoomScreenWidth, vizdoomScreenHeight);
+        depthMap = new ViZDoomDepthBuffer(vizdoomScreenWidth, vizdoomScreenHeight);
         depthMap->setDepthBoundries(120000000, 358000);//SHOULDN'T BE HERE!
     }
 }

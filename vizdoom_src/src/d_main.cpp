@@ -2617,7 +2617,7 @@ void D_DoomMain (void)
 			UpdateJoystickMenu(NULL);
 
 #ifdef VIZDOOM_DEPTH_TEST
-			depthMap = new depthBuffer(screen->GetWidth(), screen->GetHeight());
+			depthMap = new ViZDoomDepthBuffer(screen->GetWidth(), screen->GetHeight());
 			depthMap->setDepthBoundries(120000000,358000);//probabli gud, but SHOULDN'T BE HERE
 #endif
 			v = Args->CheckValue ("-loadgame");
